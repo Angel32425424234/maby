@@ -22,7 +22,7 @@ local fetcher, urls = {}, {}
 local _ENV = (getgenv or getrenv or getfenv)()
 
 urls.Owner = "https://githubusercontent.com/Angel32425424234/";
-urls.Repository = urls.Owner .. "Scripts/refs/heads/main/";
+urls.Repository = urls.Owner .. "Angel32425424234/maby/blob/";
 urls.Translator = urls.Repository .. "Translator/";
 urls.Utils = urls.Repository .. "Utils/";
 
