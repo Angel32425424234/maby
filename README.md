@@ -1,11 +1,4 @@
-local Settings = {
-    JoinTeam = "Pirates"; -- Pirates / Marines
-    Translator = true;   -- true / false
-}
-
-loadstring(game:HttpGet("[https://raw.githubusercontent.com](https://raw.githubusercontent.com/Angel32425424234/maby/refs/heads/main/README.md)/)"))(Settings)
-
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com](https://raw.githubusercontent.com/Angel32425424234/maby/refs/heads/main/README.md"))(Settings)
 local Scripts = {
 	{
 		PlacesIds = {2753915549, 4442272183, 7449423635},
@@ -21,8 +14,8 @@ local fetcher, urls = {}, {}
 
 local _ENV = (getgenv or getrenv or getfenv)()
 
-urls.Owner = "https://githubusercontent.com/Angel32425424234/";
-urls.Repository = urls.Owner .. "Angel32425424234/maby/blob/";
+urls.Owner = "https://raw.githubusercontent.com/tlredz/";
+urls.Repository = urls.Owner .. "Scripts/refs/heads/main/";
 urls.Translator = urls.Repository .. "Translator/";
 urls.Utils = urls.Repository .. "Utils/";
 
@@ -79,7 +72,7 @@ do
 	local function formatUrl(Url)
 		for key, path in urls do
 			if Url:find("{" .. key .. "}") then
-				return Url:gsub("{" .. key .. "}", path)
+				return select(1, Url:gsub("{" .. key .. "}", path))
 			end
 		end
 		
@@ -123,5 +116,3 @@ for _, Script in Scripts do
 		return fetcher.load("{Repository}Games/" .. Script.UrlPath)(fetcher, ...)
 	end
 end
-
-
