@@ -3,7 +3,7 @@ local Settings = {
     Translator = true;   -- true / false
 }
 
-loadstring(game:HttpGet("https://angel32425424234.github.io/maby/"))(Settings)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/)"))(Settings)
 
 
 local Scripts = {
